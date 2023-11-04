@@ -33,10 +33,10 @@ tags:								#标签
 
 ![](https://cdn.jsdelivr.net/gh/JiahaoLi2003/ImgHosting/Img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-10-28%20213837.png)
 
-    - Decentralized Multiagent System framework (DMAS)：去中心化多智能体系统框架,是之前关于LLMs as multi-agent planners 的工作中使用的frameworks.Each robot is assigned an LLM planner and another agent to whom it should send its comments. The agents use a turn-taking approach for dialogue.
-    - Centralized Multi-agent System framework (CMAS)：中心化多智能体系统框架，这种方法仅包含一个 LLM 作为central planner，负责在每次planning iteration assigning actions for each robo.
-    - Hybrid Multi-agent System-1(HMAS-1)：A central LLM planner proposes an initial set of actions for the current planning iteration that is provided to each of the robots’ LLM planners.然后LLMs和在DMAS中的运营方式相同。
-    - Hybrid Multi-agent System-2(HMAS-2)：a central LLM planner generates an initial set of actions for each robot, as done in CMAS; however, each robot has an LLM agent that checks its assigned action and provides feedback to the central planner. In the case of a local agent disagreeing with its assigned action, the central agent will re-plan. This process repeats until each robot’s LLM agrees with its assigned action.
+- Decentralized Multiagent System framework (DMAS)：去中心化多智能体系统框架,是之前关于LLMs as multi-agent planners 的工作中使用的frameworks.Each robot is assigned an LLM planner and another agent to whom it should send its comments. The agents use a turn-taking approach for dialogue.
+- Centralized Multi-agent System framework (CMAS)：中心化多智能体系统框架，这种方法仅包含一个 LLM 作为central planner，负责在每次planning iteration assigning actions for each robo.
+- Hybrid Multi-agent System-1(HMAS-1)：A central LLM planner proposes an initial set of actions for the current planning iteration that is provided to each of the robots’ LLM planners.然后LLMs和在DMAS中的运营方式相同。
+- Hybrid Multi-agent System-2(HMAS-2)：a central LLM planner generates an initial set of actions for each robot, as done in CMAS; however, each robot has an LLM agent that checks its assigned action and provides feedback to the central planner. In the case of a local agent disagreeing with its assigned action, the central agent will re-plan. This process repeats until each robot’s LLM agrees with its assigned action.
 
 - The full history of the dialogue, environment states, and actions 会迅速消耗 context token budget for the LLM planners, constraining the performance of these frameworks. 文章比较了对上下文中包含的历史信息进行消融研究的三种方法：
     - （1）没有历史信息
