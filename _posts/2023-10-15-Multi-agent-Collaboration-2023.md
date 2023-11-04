@@ -31,7 +31,7 @@ tags:								#标签
 
 - Communication Frameworks for Sub-task Plan
 
-![](https://cdn.jsdelivr.net/gh/JiahaoLi2003/ImgHosting/Img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-10-28%20213837.png)
+
 
     - Decentralized Multiagent System framework (DMAS)：去中心化多智能体系统框架,是之前关于LLMs as multi-agent planners 的工作中使用的frameworks.Each robot is assigned an LLM planner and another agent to whom it should send its comments. The agents use a turn-taking approach for dialogue.
     - Centralized Multi-agent System framework (CMAS)：中心化多智能体系统框架，这种方法仅包含一个 LLM 作为central planner，负责在每次planning iteration assigning actions for each robo.
