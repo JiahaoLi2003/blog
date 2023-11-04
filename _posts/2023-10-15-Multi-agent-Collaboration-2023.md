@@ -37,7 +37,7 @@ tags:								#标签
 
 ## 🧪Experiment
 
-
+![](https://cdn.jsdelivr.net/gh/JiahaoLi2003/ImgHosting@main/Img/total.png)
 - result：
 ![](https://cdn.jsdelivr.net/gh/JiahaoLi2003/ImgHosting/Img/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-10-29%20135209.png)
 
