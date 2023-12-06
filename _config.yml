@@ -19,6 +19,8 @@ sidebar-avatar: /img/me.jpg      # use absolute URL, seeing it's used in both `/
 # SNS settings
 RSS: false
 github_username:    JiahaoLi2003
+zhihu_username:     让我看看
+facebook_username:  username
 
 
 
@@ -52,8 +54,8 @@ kramdown:
 
 
 # 评论系统
-# Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+Disqus(https://disqus.com/)
+disqus_username: Jiahao Li
 
 # Gitalk
 #gitalk:
