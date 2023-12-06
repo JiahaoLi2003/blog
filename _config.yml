@@ -56,8 +56,8 @@ kramdown:
 
 
 # 评论系统
-Disqus(https://disqus.com/)
-disqus_username: Jiahao Li
+# Disqus(https://disqus.com/)
+# disqus_username: Jiahao Li
 
 # Gitalk
 #gitalk:
