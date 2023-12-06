@@ -17,10 +17,12 @@ sidebar-avatar: /img/me.jpg      # use absolute URL, seeing it's used in both `/
 
 
 # SNS settings
-RSS: False
-github_username:    JiahaoLi2003
-zhihu_username:     让我看看
+RSS: false
+jianshu_username: 	jianshu_id 
+zhihu_username:     username
 facebook_username:  username
+github_username:    username
+# weibo_username:   username
 
 
 
