@@ -6,36 +6,45 @@ header-img: "img/post-bg-rwd.jpg"
 ---
 
 <!-- Language Selector -->
-<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
+<select class="sel-lang" onchange="onLanChange(this.options[this.options.selectedIndex].value)">
     <option value="0" selected> 中文 Chinese </option>
     <option value="1"> 英文 English </option>
-</select> -->
+</select>
+
+
+<!-- English Version -->
+<div class="en post-container">
+    {% capture about_en %}{% include about/en.md %}{% endcapture %}
+    {{ about_en | markdownify }}
+</div>
 
 <!-- Chinese Version -->
 <div class="zh post-container">
 
     <!--copied from markdown -->
-    <blockquote><p>一以贯之的努力<br>
-    不可懈怠的人生</p></blockquote>
+    <blockquote>
+        <p>一以贯之的努力<br>
+            不可懈怠的人生</p>
+    </blockquote>
 
     <p>Hey，我是<strong>李嘉豪</strong>，目前大三，现就读于大连理工大学软件学院。</p>
 
     <p>学习之余，我喜欢打篮球、听音乐。</p>
-  
+
     <p>博客目前用于记录每日paper/公众号/知乎等途径阅读/学习的一些收获和总结</p>
-    
+
     <p>我参与到的项目：</p>
-    
-    <p>2023年七月进入THUNLP实验室开始实习</p>  
-    
+
+    <p>2023年七月进入THUNLP实验室开始实习</p>
+
     <p>ChatDev：<!-- <p>        
-     </p> -->   
-        
-    <a href="https://github.com/OpenBMB/ChatDev">
-                   <button>开源链接</button>
-    </a><a href="https://arxiv.org/abs/2307.07924">
-                   <button>论文链接</button>
-    </a>
+     </p> -->
+
+        <a href="https://github.com/OpenBMB/ChatDev">
+            <button>开源链接</button>
+        </a><a href="https://arxiv.org/abs/2307.07924">
+            <button>论文链接</button>
+        </a>
 
 
 
@@ -54,15 +63,15 @@ header-img: "img/post-bg-rwd.jpg"
     window.addEventListener('hashchange', _render);
 
     // handle render
-    function _render(){
+    function _render() {
         var _hash = window.location.hash;
         // en
-        if(_hash == "#en"){
+        if (_hash == "#en") {
             $select.selectedIndex = 1;
             $en.style.display = "block";
             $zh.style.display = "none";
-        // zh by default
-        }else{
+            // zh by default
+        } else {
             // not trigger onChange, otherwise cause a loop call.
             $select.selectedIndex = 0;
             $zh.style.display = "block";
@@ -71,10 +80,10 @@ header-img: "img/post-bg-rwd.jpg"
     }
 
     // handle select change
-    function onLanChange(index){
-        if(index == 0){
+    function onLanChange(index) {
+        if (index == 0) {
             window.location.hash = "#zh"
-        }else{
+        } else {
             window.location.hash = "#en"
         }
     }
@@ -91,14 +100,14 @@ header-img: "img/post-bg-rwd.jpg"
 <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
-    <script type="text/javascript">
+<script type="text/javascript">
     var gitalk = new Gitalk({
-    clientID: '{{site.gitalk.clientID}}',
-    clientSecret: '{{site.gitalk.clientSecret}}',
-    repo: '{{site.gitalk.repo}}',
-    owner: '{{site.gitalk.owner}}',
-    admin: ['{{site.gitalk.admin}}'],
-    distractionFreeMode: {{site.gitalk.distractionFreeMode}},
+        clientID: '{{site.gitalk.clientID}}',
+        clientSecret: '{{site.gitalk.clientSecret}}',
+        repo: '{{site.gitalk.repo}}',
+        owner: '{{site.gitalk.owner}}',
+        admin: ['{{site.gitalk.admin}}'],
+        distractionFreeMode: {{ site.gitalk.distractionFreeMode }},
     id: 'about',
     });
     gitalk.render('gitalk-container');
@@ -106,7 +115,7 @@ header-img: "img/post-bg-rwd.jpg"
 {% endif %}
 <!-- Gitalk end -->
 
- <!-- disqus 评论框 start  -->
+<!-- disqus 评论框 start  -->
 {% if site.disqus.enable %}
 
 <div class="comment">
@@ -122,7 +131,7 @@ header-img: "img/post-bg-rwd.jpg"
     var disqus_identifier = "{{site.disqus.username}}/{{page.url}}";
     var disqus_url = "{{site.url}}{{page.url}}";
 
-    (function() {
+    (function () {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
@@ -130,4 +139,3 @@ header-img: "img/post-bg-rwd.jpg"
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
-
